@@ -1,105 +1,74 @@
-section {
-	min-height: 100vh;
-	height: auto;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+$titleBorder: 5px solid white;
 
 a {
 	color: white;
+	&:hover {
+		color: white;
+		text-decoration: underline;
+	}
 }
 
 p {
 	color: white;
 }
 
-.title {
-
+.item {
+	min-height: 100vh;
+	height: auto;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.sub-title {
-
+.slide-1 {
+	background-image: url(../img/slide-1.jpg);
 }
 
-.intro {
-	background-image: url("../img/slide-1.jpg");
-	.logo {
-		z-index: 2;
-		position: relative;
-		margin: 0 auto;
-		transform: translate3d(0, -50%, 0);
+.slide-2 {
+	background-image: url(../img/slide-2.jpg);
+}
+
+.slide-3 {
+	background-image: url(../img/slide-3.jpg);
+}
+
+.slide-4 {
+	background-image: url(../img/slide-4.jpg);
+}
+
+.images {
+	min-width: 100%;
+	min-height: 100vh;
+	height: auto;
+	img {
+		min-width: 100%;
+		min-height: 100vh;
+		height: auto;
+		width: auto !important;
+    	max-width: none;
+
 	}
-	display: flex;
-	align-items: center;
-}
-
-.exercise {
-	background-image: url("../img/slide-2.jpg");
-}
-
-.to-progress {
-	background-image: url("../img/slide-3.jpg");
-}
-
-
-.live {
-	background-image: url("../img/slide-4.jpg");
 }
 
 .info {
 	width: 50%;
 	z-index: 2;
 	position: fixed;
-	opacity: 0;
-	visibility: hidden;
 	text-align: center;
 	left:25%;
 	top: 25%;
-	&.shown {
-		animation: fadeInDown forwards 400ms;
+	.title {
+		margin: 0 auto 35px;;
+		font-size: 55px;
+		border: $titleBorder;
 	}
-	&.not-shown {
-		animation: fadeOutDown forwards 400ms;
+	.sub-title {
+		font-size: 22px;
 	}
 }
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-	visibility: hidden;
-    transform: translate3d(0, -20%, 0);
-  }
-
-  to {
-    opacity: 1;
-	visibility: visible;
-    transform: none;
-  }
-}
-
-
-@keyframes fadeOutDown {
-  from {
-    opacity: 1;
-	visibility: visible;
-  }
-
-  to {
-    opacity: 0;
-	visibility: hidden;
-    transform: translate3d(0, -20%, 0);
-  }
-}
-
-
-
-
-
 
 
 
